@@ -1,0 +1,106 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Nov  1 02:32:07 2022
+| Host         : LAPTOP-A68MG3HE running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
+| Design       : Top_Student
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    39 |
+| Unused register locations in slices containing registers |    72 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            5 |
+|      8 |            2 |
+|     14 |            1 |
+|    16+ |           31 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             518 |          126 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             848 |          111 |
+| Yes          | No                    | No                     |             394 |           82 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             144 |           19 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------+-----------------------------------+----------------------------------------+------------------+----------------+
+|         Clock Signal        |           Enable Signal           |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
++-----------------------------+-----------------------------------+----------------------------------------+------------------+----------------+
+|  m_meditation/my_clk/clkout |                                   |                                        |                1 |              2 |
+|  mode2/my_clk/clk_1khz      |                                   |                                        |                1 |              2 |
+| ~clk_6p25mhz_BUFG           |                                   |                                        |                1 |              2 |
+|  basys_clock_IBUF_BUFG      | led[12]_i_1_n_0                   |                                        |                1 |              2 |
+|  basys_clock_IBUF_BUFG      | led[14]_i_1_n_0                   |                                        |                1 |              2 |
+|  clk_12p5mhz_BUFG           |                                   |                                        |                3 |              8 |
+|  clk_25mhz_BUFG             |                                   |                                        |                2 |              8 |
+|  basys_clock_IBUF_BUFG      | mode2/seg_hiit[6]_i_1_n_0         |                                        |                3 |             14 |
+|  basys_clock_IBUF_BUFG      | seg[6]_i_1__0_n_0                 |                                        |                5 |             22 |
+| ~mic_in/J_MIC3_Pin4_OBUF    |                                   |                                        |                5 |             24 |
+|  clk_50khz_BUFG             | peak_value_freq_reg[11]_i_2_n_2   | mic_in/SR[0]                           |                3 |             24 |
+|  J_MIC3_Pin1_OBUF_BUFG      | peak_val_reg[11]_i_2_n_2          | peak_val[11]_i_1_n_0                   |                4 |             24 |
+|  basys_clock_IBUF_BUFG      |                                   | J_MIC3_Pin1_OBUF_BUFG                  |                3 |             24 |
+|  basys_clock_IBUF_BUFG      | led[15]_i_1_n_0                   |                                        |                9 |             28 |
+|  basys_clock_IBUF_BUFG      | mode2/led_hiit[14]_i_1_n_0        |                                        |                5 |             30 |
+|  clk_50khz_BUFG             | m_freq_cnt/last_freq1_i_1_n_0     | m_freq_cnt/crosses                     |                4 |             32 |
+|  basys_clock_IBUF_BUFG      | m_rectagles/E[0]                  |                                        |               12 |             32 |
+|  basys_clock_IBUF_BUFG      | mode2/oled_hiit[15]_i_1_n_0       |                                        |               15 |             32 |
+| ~clk_6p25mhz_BUFG           |                                   | my_oled_unit/frame_counter[16]_i_1_n_0 |                5 |             34 |
+| ~clk_6p25mhz_BUFG           | my_oled_unit/delay[0]_i_1_n_0     |                                        |                5 |             40 |
+|  J_MIC3_Pin1_OBUF_BUFG      |                                   | peak_val[11]_i_1_n_0                   |                8 |             62 |
+|  clk_50khz_BUFG             |                                   | m_freq_cnt/sample_cnt[31]_i_1_n_0      |                8 |             62 |
+|  clk_25mhz_BUFG             |                                   | m_rectagles/p_0_in                     |                7 |             64 |
+|  clk_25mhz_BUFG             | m_rectagles/ledCnt[0]_i_1_n_0     |                                        |                8 |             64 |
+| ~clk_6p25mhz_BUFG           | my_oled_unit/state                |                                        |               10 |             64 |
+|  clk_12p5mhz_BUFG           |                                   | m_border_ctl/p_0_in                    |                9 |             64 |
+|  basys_clock_IBUF_BUFG      |                                   | s_clk_6p25mhz/cnt[0]_i_1__2_n_0        |                8 |             64 |
+|  basys_clock_IBUF_BUFG      |                                   | mode2/my_clk/clear                     |                8 |             64 |
+|  basys_clock_IBUF_BUFG      |                                   | s_clk_12p5mhz/cnt[0]_i_1__3_n_0        |                8 |             64 |
+|  basys_clock_IBUF_BUFG      |                                   | s_clk_20khz/clear                      |                8 |             64 |
+|  basys_clock_IBUF_BUFG      |                                   | s_clk_25mhz/cnt[0]_i_1__4_n_0          |                8 |             64 |
+|  basys_clock_IBUF_BUFG      |                                   | s_clk_50khz/cnt[0]_i_1__1_n_0          |                8 |             64 |
+|  clk_50khz_BUFG             | m_meditation/debounce[0]_i_2_n_0  | m_meditation/debounce                  |                8 |             64 |
+|  clk_50khz_BUFG             |                                   | m_meditation/my_clk/clear              |                8 |             64 |
+|  clk_12p5mhz_BUFG           | m_border_ctl/ledCnt[0]_i_1__0_n_0 |                                        |                8 |             64 |
+|  clk_50khz_BUFG             |                                   |                                        |               17 |             76 |
+|  J_MIC3_Pin1_OBUF_BUFG      |                                   |                                        |               16 |             90 |
+| ~clk_6p25mhz_BUFG           |                                   | my_oled_unit/spi_word[39]_i_1_n_0      |               15 |             90 |
+|  basys_clock_IBUF_BUFG      |                                   |                                        |               80 |            306 |
++-----------------------------+-----------------------------------+----------------------------------------+------------------+----------------+
+
+
